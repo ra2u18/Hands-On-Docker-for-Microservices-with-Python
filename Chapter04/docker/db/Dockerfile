@@ -45,7 +45,7 @@ ADD ./ThoughtsBackend/ /opt/code/
 ADD ./docker/db/* /opt/code/db/
 
 ## get the db ready
-RUN /opt/code/db/prepare_db.sh
+RUN ["chmod", "+x", "/opt/code/db/prepare_db.sh"]
 
 # Start the database in normal operation
 USER postgres
